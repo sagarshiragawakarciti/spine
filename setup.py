@@ -20,9 +20,9 @@ with open('spine/__init__.py', 'rb') as f:
 
 #requirements = parse_requirements("requirements.txt", session="")
 try:
-    requirements = [str(ir.req) for ir in install_reqs]
+    requirements = [str(ir.req) for ir in install_requires]
 except:
-    requirements = [str(ir.requirement) for ir in install_reqs]
+    requirements = [str(ir.requirement) for ir in install_requires]
 
 
 setup(
