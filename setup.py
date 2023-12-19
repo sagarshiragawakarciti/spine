@@ -18,11 +18,11 @@ with open('spine/__init__.py', 'rb') as f:
     version = str(ast.literal_eval(_version_re.search(
         f.read().decode('utf-8')).group(1)))
 
-#requirements = parse_requirements("requirements.txt", session="")
-try:
-    requirements = [str(ir.req) for ir in install_requires]
-except:
-    requirements = [str(ir.requirement) for ir in install_requires]
+requirements = parse_requirements("requirements.txt", session="")
+#try:
+ #   requirements = [str(ir.req) for ir in install_requires]
+#except:
+ #   requirements = [str(ir.requirement) for ir in install_requires]
 
 
 setup(
